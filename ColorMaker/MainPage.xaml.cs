@@ -11,7 +11,7 @@ namespace ColorMaker
         }
         string hexvalue = string.Empty; 
         bool israndom = false;
-        private void sld_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void Sld_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             if (!israndom)
             {
@@ -20,10 +20,10 @@ namespace ColorMaker
                 var green = sldGreen.Value;
                 Color color = Color.FromRgb(red, green, blue);
 
-                setColor(color);
+                SetColor(color);
             }
         }
-        private void setColor(Color color)
+        private void SetColor(Color color)
         {
             Container.BackgroundColor = color;
             hexvalue = color.ToHex();
@@ -36,10 +36,10 @@ namespace ColorMaker
             await toast.Show();
         }
 
-        private void btnrandom_Clicked(object sender, EventArgs e)
+        private void Btnrandom_Clicked(object sender, EventArgs e)
         {
             israndom = true;
-            Random random = new Random();
+            var random = new Random();
 
             var color = Color.FromRgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
 
@@ -47,7 +47,7 @@ namespace ColorMaker
             sldGreen.Value = color.Green;
             sldBlue.Value = color.Blue;
 
-            setColor(color);
+            SetColor(color);
             israndom = false;
         }
     }

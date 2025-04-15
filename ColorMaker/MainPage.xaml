@@ -21,17 +21,17 @@
                 <Slider x:Name="sldRed" 
                         MaximumTrackColor="{StaticResource Other}" 
                         MinimumTrackColor="{StaticResource Secendery}"
-                        ValueChanged="sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
+                        ValueChanged="Sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
                 <Label Text=" رنگ آبی : " HorizontalTextAlignment="End"/>
                 <Slider x:Name="sldBlue" 
                         MaximumTrackColor="{StaticResource Other}" 
                         MinimumTrackColor="{StaticResource Secendery}"
-                        ValueChanged="sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
+                        ValueChanged="Sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
                 <Label Text=" رنگ سبز : " HorizontalTextAlignment="End"/>
                 <Slider x:Name="sldGreen" 
                         MaximumTrackColor="{StaticResource Other}" 
                         MinimumTrackColor="{StaticResource Secendery}"
-                        ValueChanged="sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
+                        ValueChanged="Sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
                 <Border HorizontalOptions="Center" Padding="7">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
@@ -45,7 +45,7 @@
                 <Button x:Name="btnrandom"
                         Margin="10"
                         BackgroundColor="{StaticResource Primary}" 
-                        Text="ساخت رنگ تصادفی" Clicked="btnrandom_Clicked"/>
+                        Text="ساخت رنگ تصادفی" Clicked="Btnrandom_Clicked"/>
             </VerticalStackLayout>
         </Border>
     </Grid>

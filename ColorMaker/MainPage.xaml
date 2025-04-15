@@ -38,7 +38,7 @@
                     </Border.StrokeShape>
                     <HorizontalStackLayout>
                         <Label x:Name="lblHex" Text="کد هگز : #000000" VerticalOptions="Center"/>
-                        <ImageButton Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" Source="dotnet_bot.svg" Clicked="ImageButton_Clicked"/>
+                        <ImageButton Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" Source="copy_icon.png" Clicked="ImageButton_Clicked"/>
                     </HorizontalStackLayout>
                 </Border>
                 

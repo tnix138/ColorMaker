@@ -1,4 +1,6 @@
-﻿namespace ColorMaker
+﻿using CommunityToolkit.Maui.Alerts;
+
+namespace ColorMaker
 {
     public partial class MainPage : ContentPage
     {
@@ -7,6 +9,7 @@
         {
             InitializeComponent();
         }
+        string hexvalue = string.Empty; 
         bool israndom = false;
         private void sld_ValueChanged(object sender, ValueChangedEventArgs e)
         {
@@ -23,11 +26,14 @@
         private void setColor(Color color)
         {
             Container.BackgroundColor = color;
-            lblHex.Text = color.ToHex();
+            hexvalue = color.ToHex();
+            lblHex.Text = hexvalue;
         }
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        private async void ImageButton_Clicked(object sender, EventArgs e)
         {
-
+            await Clipboard.SetTextAsync(hexvalue);
+            var toast = Toast.Make("copied to clipboard", CommunityToolkit.Maui.Core.ToastDuration.Short,13);
+            await toast.Show();
         }
 
         private void btnrandom_Clicked(object sender, EventArgs e)

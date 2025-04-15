@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Runtime;
 
+
+
 namespace ColorMaker
 {
     [Application]
@@ -10,6 +12,8 @@ namespace ColorMaker
             : base(handle, ownership)
         {
         }
+        
+
 
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }

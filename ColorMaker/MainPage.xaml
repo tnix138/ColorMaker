@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorMaker.MainPage">
+
+    <ContentPage.Resources>
+        <Color x:Key="Primary">#ab3527</Color>
+        <Color x:Key="Secendery">#775752</Color>
+        <Color x:Key="Other">#705c2e</Color>
+    </ContentPage.Resources>
+    <Grid x:Name="Container" BackgroundColor="Black">
+
+        <Border Margin="10,0,10,0" VerticalOptions="Center" BackgroundColor="White" >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            
+            <VerticalStackLayout Spacing="20">
+                <Label Text="رنگ ساز" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <Label Text=" رنگ قرمز : " HorizontalTextAlignment="End"/>
+                <Slider x:Name="sldRed" 
+                        MaximumTrackColor="{StaticResource Other}" 
+                        MinimumTrackColor="{StaticResource Secendery}"
+                        ValueChanged="sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
+                <Label Text=" رنگ آبی : " HorizontalTextAlignment="End"/>
+                <Slider x:Name="sldBlue" 
+                        MaximumTrackColor="{StaticResource Other}" 
+                        MinimumTrackColor="{StaticResource Secendery}"
+                        ValueChanged="sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
+                <Label Text=" رنگ سبز : " HorizontalTextAlignment="End"/>
+                <Slider x:Name="sldGreen" 
+                        MaximumTrackColor="{StaticResource Other}" 
+                        MinimumTrackColor="{StaticResource Secendery}"
+                        ValueChanged="sld_ValueChanged" ThumbColor="{StaticResource Primary}"/>
+                <Border HorizontalOptions="Center" Padding="7">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <HorizontalStackLayout>
+                        <Label x:Name="lblHex" Text="کد هگز : #000000" VerticalOptions="Center"/>
+                        <ImageButton Margin="10,0,0,0" HeightRequest="25" WidthRequest="25" Source="dotnet_bot.svg" Clicked="ImageButton_Clicked"/>
+                    </HorizontalStackLayout>
+                </Border>
+                
+                <Button x:Name="btnrandom"
+                        Margin="10"
+                        BackgroundColor="{StaticResource Primary}" 
+                        Text="ساخت رنگ تصادفی" Clicked="btnrandom_Clicked"/>
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+
+</ContentPage>

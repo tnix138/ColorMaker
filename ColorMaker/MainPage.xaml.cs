@@ -37,6 +37,8 @@
             sldRed.Value = color.Red;
             sldGreen.Value = color.Green;
             sldBlue.Value = color.Blue;
+
+            setColor(color);
         }
     }
 
